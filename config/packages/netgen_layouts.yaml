@@ -1,2 +1,7 @@
 netgen_layouts:
     pagelayout: 'base.html.twig'
+
+    value_types:
+        doctrine:
+            name: 'Local Doctrine'
+            manual_items: false
