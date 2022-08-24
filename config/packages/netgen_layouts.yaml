@@ -5,3 +5,7 @@ netgen_layouts:
         doctrine:
             name: 'Local Doctrine'
             manual_items: false
+
+    query_types:
+        doctrine_search:
+            name: 'Local Doctrine Search'

@@ -27,3 +27,7 @@ services:
     App\Layouts\DoctrineValueLoader:
         tags:
             - { name: netgen_layouts.cms_value_loader, value_type: doctrine }
+
+    App\Layouts\DoctrineSearchTypeHandler:
+        tags:
+            - { name: netgen_layouts.query_type_handler, type: doctrine_search }

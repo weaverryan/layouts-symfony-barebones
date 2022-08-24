@@ -63,4 +63,14 @@ class ScreencastRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+    public function search(string $search, int $offset = 0, ?int $limit = null): array
+    {
+        return $this->createQueryBuilder('screencast')
+            ->andWhere('screencast.title LIKE :search')
+            ->setParameter('search', $search)
+            ->setFirstResult($offset)
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
 }
